@@ -1,4 +1,5 @@
 import styles from "../../styles/nev.module.css";
+import Link from "next/link";
 
 export const getStaticProps = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
@@ -13,11 +14,11 @@ const Nevlist = ({ nevs }) => {
     <div>
       <h1>Nev List</h1>
       {nevs.map((nev) => (
-        <div key={nev.id}>
-          <a className={styles.single}>
+        <Link href={`nevs/${nev.id}`} key={nev.id}>
+          <div className={styles.single}>
             <h3>{nev.name}</h3>
-          </a>
-        </div>
+          </div>
+        </Link>
       ))}
     </div>
   );

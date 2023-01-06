@@ -24,7 +24,7 @@ export default function Home() {
           quasi repellat, facere dolorem quo unde pariatur perferendis, in
           suscipit, facilis maxime.
         </p>
-        <Link href="/nev" className={styles.btn}>
+        <Link href="/nevs" className={styles.btn}>
           See Nevlisting
         </Link>
       </div>
